@@ -1,0 +1,18 @@
+{
+  "npmScope": "my-money-dashboard",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "my-money-dashboard-e2e": {
+      "tags": []
+    },
+    "my-money-dashboard": {
+      "tags": []
+    }
+  }
+}

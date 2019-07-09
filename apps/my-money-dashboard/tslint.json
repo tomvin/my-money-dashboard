@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "myMoneyDashboard", "camelCase"],
+    "component-selector": [true, "element", "my-money-dashboard", "kebab-case"]
+  }
+}

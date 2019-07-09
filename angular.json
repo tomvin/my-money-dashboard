@@ -1,0 +1,141 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "my-money-dashboard": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/workspace:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/my-money-dashboard",
+      "sourceRoot": "apps/my-money-dashboard/src",
+      "prefix": "my-money-dashboard",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/my-money-dashboard",
+            "index": "apps/my-money-dashboard/src/index.html",
+            "main": "apps/my-money-dashboard/src/main.ts",
+            "polyfills": "apps/my-money-dashboard/src/polyfills.ts",
+            "tsConfig": "apps/my-money-dashboard/tsconfig.app.json",
+            "assets": [
+              "apps/my-money-dashboard/src/favicon.ico",
+              "apps/my-money-dashboard/src/assets"
+            ],
+            "styles": ["apps/my-money-dashboard/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/my-money-dashboard/src/environments/environment.ts",
+                  "with": "apps/my-money-dashboard/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "my-money-dashboard:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "my-money-dashboard:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "my-money-dashboard:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/my-money-dashboard/tsconfig.app.json",
+              "apps/my-money-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/my-money-dashboard/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/my-money-dashboard/jest.config.js",
+            "tsConfig": "apps/my-money-dashboard/tsconfig.spec.json",
+            "setupFile": "apps/my-money-dashboard/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "my-money-dashboard-e2e": {
+      "root": "apps/my-money-dashboard-e2e",
+      "sourceRoot": "apps/my-money-dashboard-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/my-money-dashboard-e2e/cypress.json",
+            "tsConfig": "apps/my-money-dashboard-e2e/tsconfig.e2e.json",
+            "devServerTarget": "my-money-dashboard:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "my-money-dashboard:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/my-money-dashboard-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**", "!apps/my-money-dashboard-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "my-money-dashboard"
+}

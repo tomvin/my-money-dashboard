@@ -1,0 +1,39 @@
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.splash {
+  background-color: var(--primary);
+  width: 600px;
+  height: 100vh;
+}
+
+.container {
+  min-width: 600px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 16px 64px;
+}
+
+header {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

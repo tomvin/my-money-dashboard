@@ -1,0 +1,25 @@
+.login-form {
+  &__header {
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+
+    .form-email {
+      margin-bottom: 16px;
+    }
+
+    .form-password {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-money-dashboard-root',
+  selector: 'mm-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-money-dashboard';
+  title = 'My Money Dashboard';
 }

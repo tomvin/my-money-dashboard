@@ -1,0 +1,14 @@
+// Import font
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+
+@import "./variables";
+@import "./grid";
+@import "../modules/input/input.style.scss";
+
+body {
+  font-family: var(--font-family);
+  background: var(--background-grey);
+  color: var(--primary-text);
+  padding: 0;
+  margin: 0;
+}

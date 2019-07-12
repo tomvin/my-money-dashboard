@@ -4,6 +4,7 @@
 @import "./variables";
 @import "./grid";
 @import "../modules/input/input.style.scss";
+@import "../modules/button/button.style.scss";
 
 body {
   font-family: var(--font-family);
@@ -11,4 +12,5 @@ body {
   color: var(--primary-text);
   padding: 0;
   margin: 0;
+  font-size: 13px;
 }

@@ -5,9 +5,17 @@
 }
 
 .splash {
-  background-color: var(--primary);
+  background: linear-gradient(115.2deg, #146ADA 48.1%, #2684FE 48.11%);
   width: 600px;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__svg {
+    width: 120%;
+    margin-right: 164px;
+  }
 }
 
 .container {

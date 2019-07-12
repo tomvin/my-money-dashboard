@@ -1,0 +1,31 @@
+.mm-button {
+  border-radius: 16px;
+  background: inherit;
+  transition: .2s ease all;
+  font-family: var(--font-family);
+  border: none;
+
+  &:focus, &:active {
+    outline: none;
+    box-shadow: 0px 4px 9px rgba(38, 132, 254, 0.07);
+  }
+
+  &--small {
+
+  }
+
+  &--regular {
+
+  }
+
+  &--large {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  &--primary {
+    color: var(--on-primary);
+    background-color: var(--primary);
+    min-width: 128px;
+  }
+}

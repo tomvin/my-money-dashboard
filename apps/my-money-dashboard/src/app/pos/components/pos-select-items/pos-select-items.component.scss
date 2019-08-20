@@ -1,0 +1,35 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px;
+}
+
+.item {
+  background-color: var(--background-input);
+  margin-right: 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__image {
+    width: 220px;
+  }
+
+  &__info {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .item-name {
+    font-weight: bold;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 7px 7px 10px 3px #4f9bff12;
+    color: var(--primary);
+  }
+}

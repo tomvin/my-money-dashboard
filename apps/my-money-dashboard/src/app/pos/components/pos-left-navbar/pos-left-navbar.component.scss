@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  position: fixed;
+  width: 96px;
+  background-color: var(--background-input);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 4px 0px 10px 0px #4f9bff12;
+}
+
+.category {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__icon {
+    font-size: 24px;
+    color: var(--primary-2);
+    margin: 16px 0;
+  }
+
+  &__name {
+    color: var(--secondary-text);
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+.category--selected {
+  background-color: #d5e7ff;
+
+  .category__icon {
+    color: var(--primary);
+  }
+
+  .category__name {
+    color: var(--primary-text);
+  }
+}

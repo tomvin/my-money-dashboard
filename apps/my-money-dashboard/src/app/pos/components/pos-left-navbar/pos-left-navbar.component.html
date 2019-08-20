@@ -1,0 +1,6 @@
+<nav class="nav">
+  <div class="category" [class.category--selected]="i === 0" *ngFor="let category of categories; let i = index">
+    <fa-icon class="category__icon" [icon]="['fas', category.icon]"></fa-icon>
+    <span class="category__name">{{ category.name }}</span>
+  </div>
+</nav>
